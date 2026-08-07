@@ -192,6 +192,43 @@
             margin: 14px 0;
         }
 
+        .prompt-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .prompt-header .prompt-label {
+            margin-bottom: 0;
+        }
+
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            background-color: #3b82f6;
+            border: none;
+            padding: 7px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            -webkit-tap-highlight-color: transparent;
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background-color: #1e3a8a;
+        }
+
+        .copy-btn.copied {
+            background-color: #16a34a;
+        }
+
         .prompt-label {
             font-size: 12px;
             font-weight: 700;
@@ -376,14 +413,17 @@
             <li>
                 <h3>Get help instead of spending too much time on any single problem</h3>
                 <p>Since you need to solve many problems, don't lose an hour stuck on one. Ask for help, check a solution, or move on and come back to it later.</p>
-                <p>But getting help isn't the finish line. Once you understand where you went wrong, repeat similar problems from that same section until you can solve them comfortably on your own.</p>
+                <p>But getting help isn't the finish line. Once you understand where you went wrong, repeat similar problems from that same section until you can solve them comfortably on your own, without checking a solution or asking for help. Moving straight to the next topic after one explained problem usually means the confusion comes back the next time that type of problem shows up.</p>
             </li>
             <li>
                 <h3>Use AI as a tutor, not an answer key</h3>
                 <p>Getting the correct answer is not the goal, understanding the process is. An AI tutor is useful here because it can pace itself to you: pause before revealing which concept applies, plot a graph when that would help you see the problem, and walk through the solution one step at a time instead of all at once.</p>
                 <p><strong>Here's an example.</strong> Take a photo or screenshot of a problem you're working on, and paste the prompt below into the chat along with it.</p>
                 <div class="prompt-box">
-                    <div class="prompt-label">Example Prompt</div>
+                    <div class="prompt-header">
+                        <div class="prompt-label">Example Prompt</div>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+                    </div>
                     <p class="prompt-intro">You are my calculus tutor. I'm attaching a photo of a problem I'm working on. Please don't give me the final answer or a full worked solution right away. Instead, walk me through it like a tutor would, one stage at a time:</p>
                     <ol class="prompt-steps">
                         <li>Restate the problem in your own words first, so I can confirm you read it correctly.</li>
@@ -426,5 +466,49 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function copyPrompt(btn) {
+            const box = btn.closest('.prompt-box');
+            const introEl = box.querySelector('.prompt-intro');
+            const intro = introEl ? introEl.innerText.trim() : '';
+            const steps = Array.from(box.querySelectorAll('.prompt-steps li'))
+                .map((li, i) => (i + 1) + '. ' + li.innerText.trim());
+            const fullText = [intro, '', ...steps].join('\n');
+
+            function showCopied() {
+                const original = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = original;
+                    btn.classList.remove('copied');
+                }, 2000);
+            }
+
+            function fallbackCopy() {
+                const textarea = document.createElement('textarea');
+                textarea.value = fullText;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.focus();
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    showCopied();
+                } catch (err) {
+                    alert('Could not copy automatically. Please select and copy the prompt manually.');
+                }
+                document.body.removeChild(textarea);
+            }
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(fullText).then(showCopied).catch(fallbackCopy);
+            } else {
+                fallbackCopy();
+            }
+        }
+    </script>
 </body>
 </html>
