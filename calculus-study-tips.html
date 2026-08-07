@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Study Calculus - Curious2Study</title>
+    <link rel="icon" type="image/png" href="https://curious2study.com/curious2study_small.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #f8fafc;
+            padding: 20px 0;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-section img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .header-logo-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .site-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: #1e3a8a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #60a5fa;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* Back to subject link, under hero */
+        .breadcrumb {
+            max-width: 900px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+        }
+
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .breadcrumb a:hover {
+            color: #1e3a8a;
+        }
+
+        /* Article body */
+        .article {
+            padding: 30px 20px 60px;
+        }
+
+        .article h2 {
+            color: #1e3a8a;
+            font-size: 24px;
+            margin: 32px 0 14px;
+        }
+
+        .article h2:first-child {
+            margin-top: 0;
+        }
+
+        .article p {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .article strong {
+            color: #1e3a8a;
+        }
+
+        .tips-list {
+            list-style: none;
+            counter-reset: tip-counter;
+        }
+
+        .tips-list > li {
+            counter-increment: tip-counter;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px 20px 18px 60px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .tips-list > li::before {
+            content: counter(tip-counter);
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            width: 28px;
+            height: 28px;
+            background-color: #3b82f6;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .tips-list > li h3 {
+            color: #1e3a8a;
+            font-size: 17px;
+            margin-bottom: 6px;
+        }
+
+        .tips-list > li > p {
+            font-size: 15px;
+            margin-bottom: 0;
+            color: #333;
+        }
+
+        .tips-list > li > p + p {
+            margin-top: 10px;
+        }
+
+        .prompt-box {
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 14px 0;
+        }
+
+        .prompt-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .prompt-box p.prompt-intro {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .prompt-steps {
+            margin: 0 0 0 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .prompt-steps li {
+            margin-bottom: 8px;
+        }
+
+        .source-note {
+            background-color: #eff6ff;
+            padding: 10px 14px;
+            border-left: 4px solid #3b82f6;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #1e3a8a;
+            margin-top: 12px;
+        }
+
+        .source-note a {
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .source-section {
+            background-color: #f8fafc;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-top: 10px;
+        }
+
+        .source-section h2 {
+            margin-top: 0;
+        }
+
+        .source-section p {
+            font-size: 15px;
+        }
+
+        .source-section a {
+            color: #3b82f6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .source-section a:hover {
+            color: #1e3a8a;
+        }
+
+        .back-to-top {
+            text-align: center;
+            padding: 20px 20px 0;
+        }
+
+        .back-to-top a {
+            display: inline-block;
+            padding: 10px 24px;
+            background-color: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background-color 0.2s ease;
+        }
+
+        .back-to-top a:hover {
+            background-color: #1e3a8a;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content p {
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #60a5fa;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .tips-list li {
+                padding: 16px 16px 16px 54px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="https://curious2study.com/curious2study_small.png" alt="Curious2Study Logo">
+                <div class="header-logo-text">
+                    <a href="https://curious2study.com" class="site-title">Curious2Study</a>
+                </div>
+            </div>
+            <a href="https://curious2study.com" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>How to Study Calculus</h1>
+            <p>Practical habits for solving problems and building real understanding.</p>
+        </div>
+    </section>
+
+    <div class="breadcrumb">
+        <a href="index.html">← Back to Calculus</a>
+    </div>
+
+    <!-- Article -->
+    <section class="container article">
+        <h2>How Do You Study Calculus?</h2>
+        <p>Calculus builds on algebra and trigonometry. If either one feels rusty, it's worth reviewing before the semester begins, since gaps in either will slow you down across every calculus topic, not just one chapter.</p>
+        <p>It is normal to feel confused the first time you read a calculus explanation, whether it's in a textbook, a course, or a video. That confusion is part of the process, not a sign you picked the wrong resource or that calculus isn't for you. Push through a first read even if it doesn't fully click, and revisit it after you've tried a few problems.</p>
+        <p>Of the common ways to learn calculus on your own, reading and solving problems from a book or structured course, taking a paid or free online course, and watching free videos, solving problems is what actually builds the skill. Videos and worked examples are useful for seeing a method once, but explaining a problem out loud always takes longer than solving it yourself, so they work best as a supplement, not the main method. Most of your study time should go toward solving problems on your own.</p>
+        <div class="source-note">Several ideas on this page, including the point above about videos being slower than solving problems yourself, are adapted from the YouTube video <a href="https://www.youtube.com/watch?v=LGBVa-fMfzc" target="_blank">"3 Ways to Learn Calculus on Your Own"</a>. Full credit and link in the Source section below.</div>
+
+        <h2>Study Tips</h2>
+        <ol class="tips-list">
+            <li>
+                <h3>Expect to make a lot of mistakes</h3>
+                <p>Mistakes are how you learn calculus. Making a lot of them is not a bad sign, it usually means you're solving a lot of problems, which is exactly what builds the skill. Don't slow down or second-guess your approach just because you're getting things wrong along the way.</p>
+            </li>
+            <li>
+                <h3>Record why you made each mistake, right when you notice it</h3>
+                <p>This becomes a personal checklist you can use to check your work later, and it turns a wrong answer into something more useful than just a wrong answer.</p>
+            </li>
+            <li>
+                <h3>Solve at least 2 to 3 problems a day, every day</h3>
+                <p>Spaced, daily practice beats a single long session. Three problems a day, seven days a week, for a 15-week semester adds up to 315 problems, a solid pace for building real fluency (the exact number depends on the course and your starting point).</p>
+            </li>
+            <li>
+                <h3>Remember that many calculus mistakes are algebra mistakes</h3>
+                <p>The calculus step, choosing the right rule or setting up the derivative or integral, is often correct. The wrong answer usually shows up afterward, while simplifying, distributing, or solving the resulting equation. Write out every algebraic step so you (or an AI checking your work) can actually find where things went wrong.</p>
+            </li>
+            <li>
+                <h3>Get help instead of spending too much time on any single problem</h3>
+                <p>Since you need to solve many problems, don't lose an hour stuck on one. Ask for help, check a solution, or move on and come back to it later.</p>
+                <p>But getting help isn't the finish line. Once you understand where you went wrong, repeat similar problems from that same section until you can solve them comfortably on your own.</p>
+            </li>
+            <li>
+                <h3>Use AI as a tutor, not an answer key</h3>
+                <p>Getting the correct answer is not the goal, understanding the process is. An AI tutor is useful here because it can pace itself to you: pause before revealing which concept applies, plot a graph when that would help you see the problem, and walk through the solution one step at a time instead of all at once.</p>
+                <p><strong>Here's an example.</strong> Take a photo or screenshot of a problem you're working on, and paste the prompt below into the chat along with it.</p>
+                <div class="prompt-box">
+                    <div class="prompt-label">Example Prompt</div>
+                    <p class="prompt-intro">You are my calculus tutor. I'm attaching a photo of a problem I'm working on. Please don't give me the final answer or a full worked solution right away. Instead, walk me through it like a tutor would, one stage at a time:</p>
+                    <ol class="prompt-steps">
+                        <li>Restate the problem in your own words first, so I can confirm you read it correctly.</li>
+                        <li>Point out any phrases in the problem that carry a hidden instruction, like "instantaneous rate of change" versus "average rate of change," "net change" versus "total distance traveled," or "at rest," and briefly explain what each one tells you to do differently.</li>
+                        <li>Then stop. Give me a moment to think about which concept or rule applies before you tell me. Wait for me to say "next."</li>
+                        <li>When I say next, tell me which concept or rule actually applies here.</li>
+                        <li>When I say next again, plot the graph of the function if it would help me see what's going on. If a graph wouldn't add anything for this problem, say so and skip it.</li>
+                        <li>When I say next, start walking through the solution one step at a time. After each step, stop. If I ask a question about that step, answer it and wait for me to say "next" before continuing. If I just say "next," move on to the following step.</li>
+                        <li>If I tell you I think I made a mistake, or if I show you my own attempt at a step, either typed out or as a photo of my handwritten work, tell me whether the mistake was in the algebra or in the calculus concept itself, and briefly explain why.</li>
+                        <li>Only give the complete worked solution if I explicitly ask for it.</li>
+                    </ol>
+                </div>
+                <p>Work on another similar problem from the same section on your own, and then check the answer with AI.</p>
+            </li>
+            <li>
+                <h3>You don't have to go in order</h3>
+                <p>A full course is taught in a logical sequence for good reason, later topics build on earlier ones, which makes it harder to jump around. But if you're curious, you can pick up some tools, like basic integration rules, before you've formally covered their prerequisites. You'll learn more this way than you might expect, even with a modest algebra and trigonometry background.</p>
+                <div class="source-note">Idea from the YouTube video <a href="https://www.youtube.com/watch?v=LGBVa-fMfzc" target="_blank">"3 Ways to Learn Calculus on Your Own"</a>.</div>
+            </li>
+        </ol>
+
+        <div class="source-section">
+            <h2>Source</h2>
+            <p>Some tips on this page are adapted from the YouTube video <strong>"3 Ways to Learn Calculus on Your Own."</strong> <a href="https://www.youtube.com/watch?v=LGBVa-fMfzc" target="_blank">Watch it here →</a></p>
+        </div>
+
+        <div class="back-to-top">
+            <a href="index.html">← Back to Calculus</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Curious2Study - Learn How to Learn</p>
+            <p>Licensed under Creative Commons Attribution 4.0 International License (CC BY 4.0)</p>
+            <div class="footer-links">
+                <a href="https://curious2study.com">Home</a>
+                <a href="https://github.com/Curious2Study">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
