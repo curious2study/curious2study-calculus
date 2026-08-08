@@ -13,331 +13,586 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            color: #333;
-            background-color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
 
-        /* Header */
         header {
-            background-color: #f8fafc;
-            padding: 20px 0;
-            border-bottom: 2px solid #e2e8f0;
+            background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-section img {
-            width: 50px;
-            height: 50px;
-        }
-
-        .header-logo-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .site-title {
-            font-size: 24px;
+        header h1 {
+            font-size: 2.3em;
+            margin-bottom: 8px;
             font-weight: 700;
-            color: #1e3a8a;
-            text-decoration: none;
+        }
+
+        header .tagline {
+            font-size: 1.05em;
+            opacity: 0.95;
         }
 
         .back-link {
-            color: #1e3a8a;
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #003366;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
         }
 
         .back-link:hover {
-            color: #60a5fa;
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Hero */
-        .hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-
-        .status-badge {
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-top: 10px;
-        }
-
-        /* Sections */
-        .about-section {
-            padding: 40px 20px 0;
-        }
-
-        .chapter {
-            background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            overflow: hidden;
-        }
-
-        .chapter-header {
-            background-color: #f0f9ff;
-            padding: 20px;
-            border-bottom: 2px solid #e2e8f0;
-        }
-
-        .chapter-header h3 {
-            color: #1e3a8a;
-            font-size: 20px;
-            margin: 0;
-        }
-
-        .chapter-content {
-            padding: 20px;
-        }
-
-        .about-content p {
-            font-size: 15px;
-            color: #333;
-            margin-bottom: 14px;
-        }
-
-        .about-content h4 {
-            color: #1e3a8a;
-            font-size: 16px;
-            margin: 18px 0 8px;
-        }
-
-        .about-content ul {
-            margin: 0 0 14px 20px;
-            font-size: 15px;
-            color: #333;
-        }
-
-        .about-content li {
-            margin-bottom: 6px;
-        }
-
-        .about-note {
-            background-color: #eff6ff;
-            padding: 12px;
-            border-left: 4px solid #3b82f6;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #1e3a8a;
-            margin-top: 10px;
-        }
-
-        .resources {
-            padding: 20px 0 40px;
-        }
-
-        .resource-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .resource-link {
-            background: white;
-            padding: 20px;
-            border-radius: 6px;
-            border: 2px solid #e2e8f0;
-            border-left: 4px solid #3b82f6;
-        }
-
-        .resource-link h3 {
-            color: #1e3a8a;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        .resource-link p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 12px;
-        }
-
-        .resource-link a {
-            display: inline-block;
-            color: #3b82f6;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .resource-link a:hover {
-            color: #1e3a8a;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1e3a8a;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-content p {
-            margin-bottom: 10px;
-        }
-
-        .footer-links {
-            margin-top: 20px;
-        }
-
-        .footer-links a {
-            color: #60a5fa;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        .footer-links a:hover {
             text-decoration: underline;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 28px;
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            color: #003366;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .resource-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .resource-link {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #fdf3e7;
+            color: #e17055;
+            border: 1px solid #f3d9c4;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95em;
+            transition: background 0.2s ease;
+        }
+
+        .resource-link:hover {
+            background: #fbe6cf;
+        }
+
+        .volume-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .volume-tab-button {
+            flex: 1;
+            min-width: 140px;
+            padding: 12px 16px;
+            border: 2px solid #e17055;
+            background: white;
+            color: #e17055;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .volume-tab-button.active {
+            background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .volume-panel {
+            display: none;
+        }
+
+        .volume-panel.active {
+            display: block;
+        }
+
+        .volume-panel .openstax-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            color: #003366;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        .volume-panel .openstax-link:hover {
+            text-decoration: underline;
+        }
+
+        details.chapter {
+            border: 1px solid #e8e8e8;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            padding: 12px 16px;
+        }
+
+        details.chapter summary {
+            font-weight: 600;
+            color: #003366;
+            cursor: pointer;
+            font-size: 1.02em;
+        }
+
+        details.chapter summary::marker {
+            color: #e17055;
+        }
+
+        .section-list {
+            list-style: none;
+            margin-top: 12px;
+            padding-left: 4px;
+        }
+
+        .section-list li {
+            padding: 6px 0;
+            border-bottom: 1px solid #f2f2f2;
+        }
+
+        .section-list li:last-child {
+            border-bottom: none;
+        }
+
+        .section-list a {
+            color: #333;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+
+        .section-list a:hover {
+            color: #e17055;
+            text-decoration: underline;
+        }
+
+        .pdf-link {
+            display: inline-block;
+            margin-top: 12px;
+            font-size: 0.85em;
+            color: #888;
+            text-decoration: none;
+        }
+
+        .pdf-link:hover {
+            color: #e17055;
+            text-decoration: underline;
+        }
+
+        .report-box {
+            background: #f5f9ff;
+            border-left: 4px solid #004d80;
+            padding: 16px 20px;
+            border-radius: 4px;
+        }
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #b3d9ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.7em;
             }
 
-            .resource-links {
-                grid-template-columns: 1fr;
+            .volume-tabs {
+                flex-direction: column;
+            }
+
+            .card {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header-content">
-            <div class="logo-section">
-                <img src="https://curious2study.com/curious2study_small.png" alt="Curious2Study Logo">
-                <div class="header-logo-text">
-                    <a href="https://curious2study.com" class="site-title">Curious2Study</a>
-                </div>
-            </div>
-            <a href="https://curious2study.com" class="back-link">← Back to Home</a>
-        </div>
-    </header>
+    <div class="container">
+        <a href="https://curious2study.com" class="back-link">&larr; Back to Curious2Study</a>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
+        <header>
             <h1>Calculus</h1>
-            <p>From limits and derivatives to vector calculus. Video lectures are on the way.</p>
-            <span class="status-badge">🚧 Under Construction</span>
+            <p class="tagline">Video overviews built from OpenStax Calculus, Volumes 1 through 3</p>
+        </header>
+
+        <div class="card">
+            <h2>About this page</h2>
+            <p>This page collects video overviews for OpenStax Calculus Volumes 1, 2, and 3. Each video walks through one section of the textbook in order, so you can follow along section by section or jump straight to the topic you need.</p>
+            <p>Videos are organized by volume, then by chapter. Click a chapter to expand its section list.</p>
         </div>
-    </section>
 
-    <!-- About This Page Section -->
-    <section class="container about-section">
-        <div class="chapter">
-            <div class="chapter-header">
-                <h3>What to Expect</h3>
-            </div>
-            <div class="chapter-content about-content">
-                <p>This page will host the calculus video library for Curious2Study, built on OpenStax Calculus Volume 1, Volume 2, and Volume 3, combined into a single sequence. Video lectures, study guides, and links to the source material are being put together now.</p>
-                <p>Once the first set of videos is ready, this page will list each chapter with links to its lectures on YouTube, along with a way to report any errors you find.</p>
-
-                <h4>Planned Content</h4>
-                <ul>
-                    <li>Video lectures covering all 17 chapters, from Functions and Graphs through Second-Order Differential Equations</li>
-                    <li>Study guides summarizing key formulas and concepts for each chapter</li>
-                    <li>Links to the archived textbook PDFs and the official OpenStax pages for all three volumes</li>
-                    <li>A simple way to flag problems with a video or study guide</li>
-                </ul>
-
-                <div class="about-note">Videos are planned to follow the combined 17-chapter sequence rather than the three original volumes. Check back soon, or watch the GitHub repository for updates.</div>
+        <div class="card">
+            <h2>Study Tips</h2>
+            <p>Short, practical tips on how to get the most out of these videos and study more effectively.</p>
+            <div class="resource-links">
+                <a class="resource-link" href="calculus-study-tips.html">Open Study Tips</a>
             </div>
         </div>
-    </section>
 
-    <!-- Resources Section -->
-    <section class="container resources">
-        <div class="resource-links">
-            <div class="resource-link">
-                <h3>OpenStax Calculus Volume 1</h3>
-                <p>Functions through applications of integration.</p>
-                <a href="https://openstax.org/details/books/calculus-volume-1" target="_blank">Visit OpenStax →</a>
+        <div class="card">
+            <h2>Textbooks</h2>
+            <p>View each volume on OpenStax, or open the archived PDF directly.</p>
+            <div class="resource-links">
+                <a class="resource-link" href="https://openstax.org/details/books/calculus-volume-1" target="_blank" rel="noopener">Volume 1 on OpenStax</a>
+                <a class="resource-link" href="https://openstax.org/details/books/calculus-volume-2" target="_blank" rel="noopener">Volume 2 on OpenStax</a>
+                <a class="resource-link" href="https://openstax.org/details/books/calculus-volume-3" target="_blank" rel="noopener">Volume 3 on OpenStax</a>
             </div>
-
-            <div class="resource-link">
-                <h3>OpenStax Calculus Volume 2</h3>
-                <p>Integration techniques through parametric equations.</p>
-                <a href="https://openstax.org/details/books/calculus-volume-2" target="_blank">Visit OpenStax →</a>
-            </div>
-
-            <div class="resource-link">
-                <h3>OpenStax Calculus Volume 3</h3>
-                <p>Vectors, multivariable calculus, and vector calculus.</p>
-                <a href="https://openstax.org/details/books/calculus-volume-3" target="_blank">Visit OpenStax →</a>
-            </div>
-
-            <div class="resource-link">
-                <h3>GitHub Repository</h3>
-                <p>Follow progress on this project as it develops.</p>
-                <a href="https://github.com/Curious2Study/curious2study-calculus" target="_blank">View Repository →</a>
+            <div class="resource-links" style="margin-top: 10px;">
+                <a class="resource-link" href="pdf/Calculus_Volume_1_Part1.pdf" target="_blank">Volume 1, Part 1, Ch. 1 to Ch. 4</a>
+                <a class="resource-link" href="pdf/Calculus_Volume_1_Part2.pdf" target="_blank">Volume 1, Part 2, Ch. 5 to Ch. 6</a>
+                <a class="resource-link" href="pdf/Calculus_Volume_2_Part1.pdf" target="_blank">Volume 2, Part 1, Ch. 1 to Ch. 4</a>
+                <a class="resource-link" href="pdf/Calculus_Volume_2_Part2.pdf" target="_blank">Volume 2, Part 2, Ch. 5 to Ch. 7</a>
+                <a class="resource-link" href="pdf/Calculus_Volume_3_Compressed_Part1.pdf" target="_blank">Volume 3, Part 1, Ch. 1 to Ch. 5</a>
+                <a class="resource-link" href="pdf/Calculus_Volume_3_Compressed_Part2.pdf" target="_blank">Volume 3, Part 2, Ch. 6 to Ch. 7</a>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
+        <div class="card">
+            <h2>Videos by Volume and Chapter</h2>
+
+            <div class="volume-tabs">
+                <button class="volume-tab-button active" onclick="showVolume(1, this)">Volume 1</button>
+                <button class="volume-tab-button" onclick="showVolume(2, this)">Volume 2</button>
+                <button class="volume-tab-button" onclick="showVolume(3, this)">Volume 3</button>
+            </div>
+
+            <div class="volume-panel active" id="volume-1">
+                <a class="openstax-link" href="https://openstax.org/details/books/calculus-volume-1" target="_blank" rel="noopener">View Calculus Volume 1 on OpenStax &rarr;</a>
+                <br>
+                <a class="openstax-link" href="https://www.youtube.com/playlist?list=PLVRPUySkFk_k" target="_blank" rel="noopener">View Playlist &rarr;</a>
+                    <details class="chapter">
+                        <summary>Chapter 1: Functions and Graphs</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=l1kuoEGw1Q0" target="_blank" rel="noopener">1.1 Review of Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=pjbcRerAKZQ" target="_blank" rel="noopener">1.2 Basic Classes of Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wCx7bocNRgc" target="_blank" rel="noopener">1.3 Trigonometric Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=Hu0Oj8p1CWc" target="_blank" rel="noopener">1.4 Inverse Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=4MJgykzHY44" target="_blank" rel="noopener">1.5 Exponential and Logarithmic Functions</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_1_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_1_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 2: Limits</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=vEFjFKtHKl0" target="_blank" rel="noopener">2.1 A Preview of Calculus</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=lh51QlalTZU" target="_blank" rel="noopener">2.2 The Limit of a Function</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=8Ua77B9k1EI" target="_blank" rel="noopener">2.3 The Limit Laws</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=ChMg0CzWfwE" target="_blank" rel="noopener">2.4 Continuity</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=y5clXgHmtg0" target="_blank" rel="noopener">2.5 The Precise Definition of a Limit</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_1_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_1_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 3: Derivatives</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=oucKAc78fxA" target="_blank" rel="noopener">3.1 Defining the Derivative</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=p9_xxC47jqs" target="_blank" rel="noopener">3.2 The Derivative as a Function</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=CbIPopNWfhA" target="_blank" rel="noopener">3.3 Differentiation Rules</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=NDIdkkGksLE" target="_blank" rel="noopener">3.4 Derivatives as Rates of Change</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=aVUoN0uoiXE" target="_blank" rel="noopener">3.5 Derivatives of Trigonometric Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=WUDH1q5ctYg" target="_blank" rel="noopener">3.6 The Chain Rule</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=vL52akqIBNw" target="_blank" rel="noopener">3.7 Derivatives of Inverse Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=cJoM-Nmtjg0" target="_blank" rel="noopener">3.8 Implicit Differentiation</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=FepWzpmIFbc" target="_blank" rel="noopener">3.9 Derivatives of Exponential and Logarithmic Functions</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_1_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_1_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 4: Applications of Derivatives</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=LeDjZtlp--M" target="_blank" rel="noopener">4.1 Related Rates</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=PqEPQTXLokI" target="_blank" rel="noopener">4.2 Linear Approximations and Differentials</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=VH2bp7b7noU" target="_blank" rel="noopener">4.3 Maxima and Minima</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=LOWuLLzSVJs" target="_blank" rel="noopener">4.4 The Mean Value Theorem</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=QRTUV0fyXg0" target="_blank" rel="noopener">4.5 Derivatives and the Shape of a Graph</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=x6rm9AT2oDE" target="_blank" rel="noopener">4.6 Limits at Infinity and Asymptotes</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=JuN10PH0P20" target="_blank" rel="noopener">4.7 Applied Optimization Problems</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=SApRyJlvsyQ" target="_blank" rel="noopener">4.8 L'Hopital's Rule</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=KkZuI2Sj5lg" target="_blank" rel="noopener">4.9 Newton's Method</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=HwD37tjL1TI" target="_blank" rel="noopener">4.10 Antiderivatives</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_1_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_1_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 5: Integration</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=Dhgxt7JAWpI" target="_blank" rel="noopener">5.1 Approximating Areas</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wCKeKVzYhzQ" target="_blank" rel="noopener">5.2 The Definite Integral</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=RsJS7vFQOfU" target="_blank" rel="noopener">5.3 The Fundamental Theorem of Calculus</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=xNnnqF9AmiM" target="_blank" rel="noopener">5.4 Integration Formulas and the Net Change Theorem</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=kFdZ7qbW0-o" target="_blank" rel="noopener">5.5 Substitution</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=RFQbR_MUzYw" target="_blank" rel="noopener">5.6 Integrals Involving Exponential and Logarithmic Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=_auloWxRDIQ" target="_blank" rel="noopener">5.7 Integrals Resulting in Inverse Trigonometric Functions</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_1_Part2.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_1_Part2.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 6: Applications of Integration</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=RaCUtYOO0ys" target="_blank" rel="noopener">6.1 Areas between Curves</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=FR2bYMAP6PU" target="_blank" rel="noopener">6.2 Determining Volumes by Slicing</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=6c09F-Dszl8" target="_blank" rel="noopener">6.3 Volumes of Revolution: Cylindrical Shells</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=xfH_0wVVuhM" target="_blank" rel="noopener">6.4 Arc Length of a Curve and Surface Area</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=tNVSRtDApHw" target="_blank" rel="noopener">6.5 Physical Applications</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=oaILeDgYUNw" target="_blank" rel="noopener">6.6 Moments and Centers of Mass</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=6n9nEWmY0XI" target="_blank" rel="noopener">6.7 Integrals, Exponential Functions, and Logarithms</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=EFMNeVepZDM" target="_blank" rel="noopener">6.8 Exponential Growth and Decay</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=bzev8Om6dxs" target="_blank" rel="noopener">6.9 Calculus of the Hyperbolic Functions</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_1_Part2.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_1_Part2.pdf)</a>
+                    </details>
+            </div>
+
+            <div class="volume-panel" id="volume-2">
+                <a class="openstax-link" href="https://openstax.org/details/books/calculus-volume-2" target="_blank" rel="noopener">View Calculus Volume 2 on OpenStax &rarr;</a>
+                <br>
+                <a class="openstax-link" href="https://www.youtube.com/playlist?list=PLVRPUySkFk_k" target="_blank" rel="noopener">View Playlist &rarr;</a>
+                    <details class="chapter">
+                        <summary>Chapter 1: Integration</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=vH9HuvyBNvk" target="_blank" rel="noopener">1.1 Approximating Areas</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=WaN0p9e3Y64" target="_blank" rel="noopener">1.2 The Definite Integral</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=km_1ZC_tIqY" target="_blank" rel="noopener">1.3 The Fundamental Theorem of Calculus</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=eg67gQEhVos" target="_blank" rel="noopener">1.4 Integration Formulas and the Net Change Theorem</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=eo7WwWdvMas" target="_blank" rel="noopener">1.5 Substitution</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=2L40PIY1gyQ" target="_blank" rel="noopener">1.6 Integrals Involving Exponential and Logarithmic Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=g-cAKlmgDxs" target="_blank" rel="noopener">1.7 Integrals Resulting in Inverse Trigonometric Functions</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_2_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_2_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 2: Applications of Integration</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=HUWAOxLquaQ" target="_blank" rel="noopener">2.1 Areas between Curves</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=Z4wpAkTgozo" target="_blank" rel="noopener">2.2 Determining Volumes by Slicing</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=raNa09f3Lr8" target="_blank" rel="noopener">2.3 Volumes of Revolution: Cylindrical Shells</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=D_Hl8naC-Js" target="_blank" rel="noopener">2.4 Arc Length of a Curve and Surface Area</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dUlNUR_c1aI" target="_blank" rel="noopener">2.5 Physical Applications</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=nvGv5LBF1HE" target="_blank" rel="noopener">2.6 Moments and Centers of Mass</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=RyYLhprqkwM" target="_blank" rel="noopener">2.7 Integrals, Exponential Functions, and Logarithms</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=ws7kQIlry8A" target="_blank" rel="noopener">2.8 Exponential Growth and Decay</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=IF3UVz-pjNI" target="_blank" rel="noopener">2.9 Calculus of the Hyperbolic Functions</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_2_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_2_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 3: Techniques of Integration</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=E-6oDYDSWrM" target="_blank" rel="noopener">3.1 Integration by Parts</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=mdOlAKYypeo" target="_blank" rel="noopener">3.2 Trigonometric Integrals</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=PPnVAcgWDr8" target="_blank" rel="noopener">3.3 Trigonometric Substitution</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=sTBo1cMQE70" target="_blank" rel="noopener">3.4 Partial Fractions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=-zilXDOLEaA" target="_blank" rel="noopener">3.5 Other Strategies for Integration</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=FYbNDwC_rpM" target="_blank" rel="noopener">3.6 Numerical Integration</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=YYjZuVQKdCA" target="_blank" rel="noopener">3.7 Improper Integrals</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_2_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_2_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 4: Introduction to Differential Equations</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=ThHdT1uh4LQ" target="_blank" rel="noopener">4.1 Basics of Differential Equations</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=rbMD_4Qsbwk" target="_blank" rel="noopener">4.2 Direction Fields and Numerical Methods</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=mJOlHe__EUg" target="_blank" rel="noopener">4.3 Separable Equations</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wshBLNqr47g" target="_blank" rel="noopener">4.4 The Logistic Equation</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=YRYn42nfsMM" target="_blank" rel="noopener">4.5 First-order Linear Equations</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_2_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_2_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 5: Sequences and Series</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=Kt4St8Ycq3o" target="_blank" rel="noopener">5.1 Sequences</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=KoLlZum7wrw" target="_blank" rel="noopener">5.2 Infinite Series</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=tjCalGY7_Pg" target="_blank" rel="noopener">5.3 The Divergence and Integral Tests</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=CHjxwZOZcAg" target="_blank" rel="noopener">5.4 Comparison Tests</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=W5sUPvyDB5c" target="_blank" rel="noopener">5.5 Alternating Series</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=v0Kq_3hDEnM" target="_blank" rel="noopener">5.6 Ratio and Root Tests</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_2_Part2.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_2_Part2.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 6: Power Series</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=AXCUSiZKNic" target="_blank" rel="noopener">6.1 Power Series and Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=QrIkuW6uNTA" target="_blank" rel="noopener">6.2 Properties of Power Series</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=ak2rNtDl2Ds" target="_blank" rel="noopener">6.3 Taylor and Maclaurin Series</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=YNJVMVWIhmI" target="_blank" rel="noopener">6.4 Working with Taylor Series</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_2_Part2.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_2_Part2.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 7: Parametric Equations and Polar Coordinates</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=oMHXi7qVfis" target="_blank" rel="noopener">7.1 Parametric Equations</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=hlPF9Fs--vU" target="_blank" rel="noopener">7.2 Calculus of Parametric Curves</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=m5d-THfxWCA" target="_blank" rel="noopener">7.3 Polar Coordinates</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=cmdpRb8xmDc" target="_blank" rel="noopener">7.4 Area and Arc Length in Polar Coordinates</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=1PU_UxmLjhA" target="_blank" rel="noopener">7.5 Conic Sections</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_2_Part2.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_2_Part2.pdf)</a>
+                    </details>
+            </div>
+
+            <div class="volume-panel" id="volume-3">
+                <a class="openstax-link" href="https://openstax.org/details/books/calculus-volume-3" target="_blank" rel="noopener">View Calculus Volume 3 on OpenStax &rarr;</a>
+                <br>
+                <a class="openstax-link" href="https://www.youtube.com/playlist?list=PLVRPUySkFk_k" target="_blank" rel="noopener">View Playlist &rarr;</a>
+                    <details class="chapter">
+                        <summary>Chapter 1: Parametric Equations and Polar Coordinates</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=LSfhmyV7beU" target="_blank" rel="noopener">1.1 Parametric Equations</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=UtEexBaz9Tk" target="_blank" rel="noopener">1.2 Calculus of Parametric Curves</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=33JkbiIxqOI" target="_blank" rel="noopener">1.3 Polar Coordinates</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=BHfotD45UiY" target="_blank" rel="noopener">1.4 Area and Arc Length in Polar Coordinates</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=iZFuVCxu9Ek" target="_blank" rel="noopener">1.5 Conic Sections</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_3_Compressed_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_3_Compressed_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 2: Vectors in Space</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=shHhfjDzndo" target="_blank" rel="noopener">2.1 Vectors in the Plane</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=_fnuZZY-37k" target="_blank" rel="noopener">2.2 Vectors in Three Dimensions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=dgQUKB5fz3I" target="_blank" rel="noopener">2.3 The Dot Product</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=5_8I5-e8AoM" target="_blank" rel="noopener">2.4 The Cross Product</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=cRDxZ8lRDsc" target="_blank" rel="noopener">2.5 Equations of Lines and Planes in Space</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=RhbMD9sATeo" target="_blank" rel="noopener">2.6 Quadric Surfaces</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=CUjrZxG-PH8" target="_blank" rel="noopener">2.7 Cylindrical and Spherical Coordinates</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_3_Compressed_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_3_Compressed_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 3: Vector-Valued Functions</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=9iDuMyQC5gE" target="_blank" rel="noopener">3.1 Vector-Valued Functions and Space Curves</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=K_5RHrY1s74" target="_blank" rel="noopener">3.2 Calculus of Vector-Valued Functions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=H9nJq3-pFRs" target="_blank" rel="noopener">3.3 Arc Length and Curvature</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=0oUtoflzGZ8" target="_blank" rel="noopener">3.4 Motion in Space</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_3_Compressed_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_3_Compressed_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 4: Differentiation of Functions of Several Variables</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=QVdyCGi7wq8" target="_blank" rel="noopener">4.1 Functions of Several Variables</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=4BbPFeEQfKw" target="_blank" rel="noopener">4.2 Limits and Continuity</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=35wFJ14ku_k" target="_blank" rel="noopener">4.3 Partial Derivatives</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=_Tgz_pl7TNE" target="_blank" rel="noopener">4.4 Tangent Planes and Linear Approximations</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=9VOXLsPZfxo" target="_blank" rel="noopener">4.5 The Chain Rule</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=BLQw9LT5m7E" target="_blank" rel="noopener">4.6 Directional Derivatives and the Gradient</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=li_PC2vYHxM" target="_blank" rel="noopener">4.7 Maxima/Minima Problems</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=IOsk2MsvBu0" target="_blank" rel="noopener">4.8 Lagrange Multipliers</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_3_Compressed_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_3_Compressed_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 5: Multiple Integration</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=6_5vcz0SvF8" target="_blank" rel="noopener">5.1 Double Integrals over Rectangular Regions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=MUxo7tIU6CI" target="_blank" rel="noopener">5.2 Double Integrals over General Regions</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=hvGQ6y14eWo" target="_blank" rel="noopener">5.3 Double Integrals in Polar Coordinates</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=mldmYVEn134" target="_blank" rel="noopener">5.4 Triple Integrals</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=mrH1c1snARs" target="_blank" rel="noopener">5.5 Triple Integrals in Cylindrical and Spherical Coordinates</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=wUtDXem_w-E" target="_blank" rel="noopener">5.6 Calculating Centers of Mass and Moments of Inertia</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=V0XXIHIN8cA" target="_blank" rel="noopener">5.7 Change of Variables in Multiple Integrals</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_3_Compressed_Part1.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_3_Compressed_Part1.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 6: Vector Calculus</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=XcMqICwXkdg" target="_blank" rel="noopener">6.1 Vector Fields</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=zBus7Fh8CPY" target="_blank" rel="noopener">6.2 Line Integrals</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=ZBmxO9UwTc8" target="_blank" rel="noopener">6.3 Conservative Vector Fields</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=JIKmUgG5k-I" target="_blank" rel="noopener">6.4 Green's Theorem</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=QG6ML5Mfqj4" target="_blank" rel="noopener">6.5 Divergence and Curl</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=B00K94IhR0o" target="_blank" rel="noopener">6.6 Surface Integrals</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=gsyw2sSbY6c" target="_blank" rel="noopener">6.7 Stokes' Theorem</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=7_iphv21zTg" target="_blank" rel="noopener">6.8 The Divergence Theorem</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_3_Compressed_Part2.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_3_Compressed_Part2.pdf)</a>
+                    </details>
+                    <details class="chapter">
+                        <summary>Chapter 7: Second-Order Differential Equations</summary>
+                        <ul class="section-list">
+                            <li><a href="https://www.youtube.com/watch?v=gmZ1VUc7xEA" target="_blank" rel="noopener">7.1 Second-Order Linear Equations</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=W2vE3l2Wito" target="_blank" rel="noopener">7.2 Nonhomogeneous Linear Equations</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=xYDYp4o8pfA" target="_blank" rel="noopener">7.3 Applications</a></li>
+                            <li><a href="https://www.youtube.com/watch?v=JBTFPCQLKyE" target="_blank" rel="noopener">7.4 Series Solutions of Differential Equations</a></li>
+                        </ul>
+                        <a class="pdf-link" href="pdf/Calculus_Volume_3_Compressed_Part2.pdf" target="_blank">Textbook pages for this chapter (Calculus_Volume_3_Compressed_Part2.pdf)</a>
+                    </details>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Found a problem with a video?</h2>
+            <div class="report-box">
+                <p>Report it here: <a href="https://github.com/curious2study/curious2study-calculus/issues/new/choose" target="_blank" rel="noopener">Report an Issue</a></p>
+                <p style="margin-bottom: 0;">Let us know the video name and what looks wrong. No account setup is needed beyond a free GitHub account.</p>
+            </div>
+        </div>
+
+        <footer>
             <p>Curious2Study - Learn How to Learn</p>
-            <p>Licensed under Creative Commons Attribution 4.0 International License (CC BY 4.0)</p>
-            <div class="footer-links">
-                <a href="https://curious2study.com">Home</a>
-                <a href="https://github.com/Curious2Study">GitHub</a>
-            </div>
-        </div>
-    </footer>
+            <p>Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a></p>
+            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.8;">Built with OpenStax textbooks | Powered by education</p>
+        </footer>
+    </div>
+
+    <script>
+        function showVolume(num, btn) {
+            document.querySelectorAll('.volume-panel').forEach(function(el) { el.classList.remove('active'); });
+            document.querySelectorAll('.volume-tab-button').forEach(function(el) { el.classList.remove('active'); });
+            document.getElementById('volume-' + num).classList.add('active');
+            btn.classList.add('active');
+        }
+    </script>
 </body>
 </html>
